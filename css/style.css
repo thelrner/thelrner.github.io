@@ -49,7 +49,7 @@ section {
 
 section > div {
   display: block;
-  width: 900px;
+  width: 800px;
   margin: auto;
 }
 
@@ -59,6 +59,7 @@ section.navbar-container {
   display: block;
   background: black;
   width: 100%;
+  opacity: 0.75;
 }
 
 div.navbar {
@@ -73,19 +74,16 @@ div.navbar li {
   float: left;
   cursor: pointer;
   padding: 15px;
-  margin-right: 20px;
+  margin-right: 15px;
   font-weight: 100;
 }
 
 section.splash-container {
-  position: relative;
-  top: 50px;
 }
 
 div.splash {
   width: 100%;
-  height: 450px;
-  margin-bottom: 50px;
+  height: 500px;
 }
 /* Need the margin bottom to push everything else out of the way... */
 
@@ -119,30 +117,35 @@ div.about-me-inner p:first-child {
 }
 
 section.skills-container {
-  height: 350px;
   background: #F5F5F5;
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+
+div.skills h1 {
+  display: block;
+  text-align: center;
 }
 
 div.skills {
-  width: 900px;
 }
 
 div.skills ul.skill-items {
   margin: auto;
-  width: 700px;
+  width: 800px;
 }
 
 ul.skill-items li.skill-item {
   float: left;
   display: block;
-  width: 110px;
-  height: 125px;
-  padding: 15px;
+  width: 120px;
+  height: 135px;
+  padding: 20px;
 }
 
 li.skill-item figure {
   width: 100%;
-  height: 110px;
+  height: 120px;
 }
 
 li.skill-item label {
@@ -154,6 +157,13 @@ li.skill-item label {
   font-size: 14px;
 }
 
-div.projects {
+div.projects h1 {
+  display: block;
+  text-align: center;
+  margin-top: 30px;
+}
 
+div.projects ul.project-items li {
+  display: block;
+  border: 1px solid #ccc;
 }
