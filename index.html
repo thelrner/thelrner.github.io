@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
+  <title>Peter Hua</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <section id="navbar" class="navbar-container">
+    <div class="navbar">
+      <ul class="navbar-items group">
+
+        <li class="navbar-item">
+          <a href="#about-me">About</a>
+        </li>
+        <li class="navbar-item">
+          <a href="#skills">Skills</a>
+        </li>
+        <li class="navbar-item">
+          <a href="#projects">Projects</a>
+        </li>
+        <li class="navbar-item">
+          <a href="#contact">Contact</a>
+        </li>
+        <li class="navbar-item">
+          <a>Resume</a>
+          <!-- gotta make it file download! -->
+        </li>
+
+      </ul>
+    </div>
+  </section>
+
+  <section id="splash" class="splash-container">
+    <div class="splash">
+
+    </div>
+  </section>
+
+  <section id="about-me" class="about-me-container">
+    <div class="about-me">
+      <p>
+        Hello, I'm Peter. I'm a web developer with experience in Ruby and Javascript. My projects are built with Rails and Backbone. RESTful architecture, MVC frameworks, etc.
+      </p>
+      <p>
+        Long live the future.
+        On an unceasing[endless][relentless] quest to improve himself.
+      </p>
+    </div>
+  </section>
+
+  <section id="skills" class="skills-container">
+    <div class="skills">
+      <h1>Technologies and Skills</h1>
+
+      <p>
+        SKILLS HERE
+      </p>
+
+    </div>
+  </section>
+
+  <section id="projects" class="projects-container">
+    <div class="projects">
+      <h1>Projects</h1>
+
+      <ul class="project-items">
+        <li class="project-item">
+          <figure class="project-image">
+            <img src="http://www.aviatorcameragear.com/wp-content/uploads/2012/07/placeholder-470x352.jpg" alt="" />
+          </figure>
+          <h1>Traksana</h1>
+          <p>
+            Team collaboration app. Front-end niceties. Free Asana.
+          </p>
+        </li>
+
+        <li class="project-item">
+          <figure class="project-image">
+            <img src="http://www.aviatorcameragear.com/wp-content/uploads/2012/07/placeholder-470x352.jpg" alt="" />
+          </figure>
+          <h1>Snake</h1>
+          <p>
+            The classic.
+          </p>
+        </li>
+
+        <li class="project-item">
+          <figure class="project-image">
+            <img src="http://www.aviatorcameragear.com/wp-content/uploads/2012/07/placeholder-470x352.jpg" alt="" />
+          </figure>
+          <h1>Chess</h1>
+          <p>
+            The classic.
+          </p>
+        </li>
+      </ul>
+
+    </div>
+  </section>
+
+  <section id="contact" class="contact-container">
+    <div class="contact">
+      <h1>Contact Me</h1>
+
+      <ul class="contact-items">
+
+        <li class="contact-item">
+          <a href="http://www.github.com/thelrner">
+            <i class="fa fa-github"></i>
+          </a>
+        </li>
+        <li class="contact-item">
+          <a href="mailto:peterhua.dev@gmail.com">
+            <i class="fa fa-envelope-o"></i>
+          </a>
+        </li>
+        <li class="contact-item">
+          <a href="www.linkedin.com/in/peteryhua">
+            <i class="fa fa-linkedin-square"></i>
+          </a>
+        </li>
+
+      </ul>
+
+      <h2>Or download my resume:</h2>
+      <a href="./docs/PeterHuaResume.pdf"><i class="icon-profile"></i></a>
+
+    </div>
+  </section>
+
+
+
+</body>
+</html>
