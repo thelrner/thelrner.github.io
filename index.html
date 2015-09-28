@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
   <title>Peter Hua</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
 </head>
 <body>
 
   <section id="navbar" class="navbar-container">
-    <div class="navbar">
+    <div class="navbar group">
       <ul class="navbar-items group">
 
         <li class="navbar-item">
@@ -37,18 +35,25 @@
   <section id="splash" class="splash-container">
     <div class="splash">
 
+      <figure class="splash-background">
+        <img src="http://www.aviatorcameragear.com/wp-content/uploads/2012/07/placeholder-470x352.jpg" alt="" />
+      </figure>
+
+      <h1>Developer</h1>
+
     </div>
   </section>
 
   <section id="about-me" class="about-me-container">
     <div class="about-me">
-      <p>
-        Hello, I'm Peter. I'm a web developer with experience in Ruby and Javascript. My projects are built with Rails and Backbone. RESTful architecture, MVC frameworks, etc.
-      </p>
-      <p>
-        Long live the future.
-        On an unceasing[endless][relentless] quest to improve himself.
-      </p>
+      <div class="about-me-inner">
+        <p>
+          Hello, I'm Peter. I'm a web developer with experience in Ruby and Javascript. My projects are built with Rails and Backbone. I dig RESTful architecture, MVC frameworks, and long walks on the beach. I'm looking for a challenging environment. On an unceasing[endless][relentless] quest to improve himself.
+        </p>
+        <p>
+          Also, I write sci-fi. Long live the future.
+        </p>
+      </div>
     </div>
   </section>
 
@@ -56,10 +61,55 @@
     <div class="skills">
       <h1>Technologies and Skills</h1>
 
-      <p>
-        SKILLS HERE
-      </p>
+      <ul class="skill-items group">
 
+        <li class=skill-item>
+          <figure class="skill-image">
+            <img src="http://www.aviatorcameragear.com/wp-content/uploads/2012/07/placeholder-470x352.jpg" alt="" />
+          </figure>
+          <label>Ruby</label>
+        </li>
+
+        <li class=skill-item>
+          <figure class="skill-image">
+            <img src="http://www.aviatorcameragear.com/wp-content/uploads/2012/07/placeholder-470x352.jpg" alt="" />
+          </figure>
+          <label>Javascript</label>
+        </li>
+
+        <li class=skill-item>
+          <figure class="skill-image">
+            <img src="http://www.aviatorcameragear.com/wp-content/uploads/2012/07/placeholder-470x352.jpg" alt="" />
+          </figure>
+          <label>Rails</label>
+        </li>
+
+        <li class=skill-item>
+          <figure class="skill-image">
+            <img src="http://www.aviatorcameragear.com/wp-content/uploads/2012/07/placeholder-470x352.jpg" alt="" />
+          </figure>
+          <label>Backbone.js</label>
+        </li>
+
+        <li class=skill-item>
+          <figure class="skill-image">
+            <img src="http://www.aviatorcameragear.com/wp-content/uploads/2012/07/placeholder-470x352.jpg" alt="" />
+          </figure>
+          <label>SQL</label>
+        </li>
+
+        <li class=skill-item>
+          <figure class="skill-image">
+            <img src="http://www.aviatorcameragear.com/wp-content/uploads/2012/07/placeholder-470x352.jpg" alt="" />
+          </figure>
+        </li>
+
+        <li class=skill-item>
+          <figure class="skill-image">
+            <img src="http://www.aviatorcameragear.com/wp-content/uploads/2012/07/placeholder-470x352.jpg" alt="" />
+          </figure>
+        </li>
+      </ul>
     </div>
   </section>
 
@@ -69,30 +119,30 @@
 
       <ul class="project-items">
         <li class="project-item">
+          <h2>Traksana</h2>
           <figure class="project-image">
             <img src="http://www.aviatorcameragear.com/wp-content/uploads/2012/07/placeholder-470x352.jpg" alt="" />
           </figure>
-          <h1>Traksana</h1>
           <p>
             Team collaboration app. Front-end niceties. Free Asana.
           </p>
         </li>
 
         <li class="project-item">
+          <h2>Snake</h2>
           <figure class="project-image">
             <img src="http://www.aviatorcameragear.com/wp-content/uploads/2012/07/placeholder-470x352.jpg" alt="" />
           </figure>
-          <h1>Snake</h1>
           <p>
             The classic.
           </p>
         </li>
 
         <li class="project-item">
+          <h2>Chess</h2>
           <figure class="project-image">
             <img src="http://www.aviatorcameragear.com/wp-content/uploads/2012/07/placeholder-470x352.jpg" alt="" />
           </figure>
-          <h1>Chess</h1>
           <p>
             The classic.
           </p>
