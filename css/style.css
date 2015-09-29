@@ -29,6 +29,16 @@ h1 {
   clear: both;
 }
 
+section.navbar-container.opaque {
+  opacity: 1;
+  transition: opacity 0.65s;
+}
+
+.opaque {
+  opacity: 1;
+  transition: 0.25s;
+}
+
 body {
   font-family: 'Lato', sans-serif;
   font-weight: 300;
@@ -79,6 +89,12 @@ div.navbar li {
   cursor: pointer;
   padding: 15px;
   margin-right: 15px;
+}
+
+div.navbar li:hover {
+  background: white;
+  color: black;
+  transition: background 0.25s, color 0.25s;
 }
 
 section.splash-container {
@@ -195,6 +211,7 @@ div.skills h1 {
   display: block;
   text-align: center;
   margin-bottom: 30px;
+  font-size: 40px;
 }
 
 div.skills {
@@ -236,6 +253,7 @@ section.projects-container {
 
 div.projects h1 {
   margin-bottom: 25px;
+  font-size: 40px;
 }
 
 div.projects ul.project-items li {
@@ -268,5 +286,50 @@ ul.project-items div.project-blurb h2 {
 
 section.contact-container {
   background: #FBFBFB;
-  padding: 40px 0px;
+  padding: 70px 0px;
+}
+
+div.contact h1 {
+  font-size: 40px;
+  display: block;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+div.contact ul.contact-items {
+  width: 300px;
+  display: block;
+  margin: auto;
+}
+
+ul.contact-items li {
+  display: block;
+  float: left;
+  font-size: 65px;
+  margin-top: 30px;
+  margin: 0px 20px;
+}
+
+div.contact div.resume-download {
+  width: 100%;
+}
+
+div.contact h2 {
+  font-size: 24px;
+  text-align: center;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+div.contact a.resume {
+  display: block;
+  width: 65px;
+  font-size: 65px;
+  margin: auto;
+  text-align: center;
+}
+
+ul.contact-items li:hover, div.contact a.resume:hover {
+  color: #bbb;
 }
