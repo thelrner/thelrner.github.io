@@ -1,29 +1,22 @@
 window.PersonalSite = {
   bindEvents: function() {
-    this.addNavbarListener();
+    this.addNavbarListeners();
   },
 
-  addNavbarListener: function() {
-    $('div.navbar li').on('mouseenter', this.toggleNavOpacity.bind(this));
-    $('div.navbar li').on('mouseleave', this.toggleNavOpacity.bind(this));
-    $('div.navbar li').on('click', this.beObnoxious.bind(this));
+  addNavbarListeners: function() {
+    $('div.navbar').on('mouseenter', this.toggleNavOpacity.bind(this));
+    $('div.navbar').on('mouseleave', this.toggleNavOpacity.bind(this));
+    $('div.navbar a').on('click', this.scroll.bind(this));
   },
 
   toggleNavOpacity: function(e) {
     $('section.navbar-container').toggleClass('opaque');
   },
 
-  beObnoxious: function(e) {
-    console.log('being obnoxious!');
+  scroll: function(e) {
+    e.preventDefault();
+    $currentTarget = $(e.currentTarget);
+    $(window).scrollTo( $( $currentTarget.attr('href') ), 500);
   },
 
 };
-
-// window.PersonalSite.bindEvents = function() {
-//   this.addNavbarListener();
-// };
-// //i won't even bother using a prototypes here -- app is literally 1 page
-//
-// window.PersonalSite.addNavbarListener: function() {
-//
-// }
