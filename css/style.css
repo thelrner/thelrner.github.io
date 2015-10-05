@@ -112,22 +112,11 @@ div.splash {
   height: 650px;
   min-width: 1280px;
 }
-/* Need the margin bottom to push everything else out of the way... */
-/* Minimum width so it don't keep resizing on us */
+/* Prevents resizing with small window */
 
 div.splash figure {
   width: 100%;
   height: 100%;
-}
-
-div.splash h1 {
-  display: block;
-  font-size: 32px;
-  font-weight: 300;
-  float: left;
-  display: block;
-  text-align: left;
-  font-weight: normal;
 }
 
 figure.splash-background img {
@@ -158,12 +147,18 @@ div.splash div.splash-blurb {
 
 div.splash div.splash-blurb h1 {
   display: block;
+  font-size: 38px;
+  font-weight: 300;
   float: left;
+  display: block;
+  text-align: left;
+  font-weight: normal;
   margin-bottom: 5px;
 }
 
 div.splash div.splash-blurb p {
   display: block;
+  font-size: 18px;
   float: left;
 }
 
@@ -180,10 +175,9 @@ figure.me img {
   border-radius: 50%;
   border: 2px solid transparent;
 }
-/*#555*/
 
 section.about-me-container {
-  background: #1E1E1E;
+  background: #101010;
   color: #EEEEEE;
 }
 
@@ -261,6 +255,7 @@ li.skill-item label {
 section.projects-container {
   color: white;
   padding: 50px 0px;
+  background: #1A1A1A;
 }
 
 div.projects h1 {
@@ -276,17 +271,72 @@ div.projects ul.project-items li {
 }
 
 ul.project-items figure.project-image {
+  position: relative;
   float: left;
-  height: 125px;
-  width: 198px;
+  height: 150px;
+  width: 223px;
   border: 1px solid #ccc;
-  padding: 5px;
+  padding: 7px;
+}
+
+figure.project-image > div {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.35s;
+}
+
+figure.project-image div.project-image-overlay {
+  background: white;
+}
+
+figure.project-image div.project-links-container {
+  background: transparent;
+}
+
+div.project-links-container div.project-links {
+  position: relative;
+  top: 33px;
+  width: 100px;
+  margin: auto;
+}
+
+div.project-links-container div.project-links.single {
+  top: 60px;
+}
+
+div.project-links a {
+  color: white;
+  display: block;
+  text-align: center;
+  width: 70px;
+  height: 25px;
+  border: 1px solid white;
+  background: #ddd;
+  transition: background 0.25s;
+  padding: 10px 15px 5px 15px;
+  margin-bottom: 10px;
+}
+
+figure.project-image:hover div.project-image-overlay {
+  opacity: 0.4;
+}
+
+figure.project-image:hover div.project-links-container {
+  opacity: 1;
+}
+
+div.project-links a:hover {
+  background: #aaa;
 }
 
 ul.project-items div.project-blurb {
   display: block;
   float: left;
-  width: 500px;
+  width: 480px;
   margin-left: 25px;
 }
 
@@ -320,6 +370,7 @@ ul.contact-items li {
   font-size: 65px;
   margin-top: 30px;
   margin: 0px 20px;
+  transition: color 0.15s;
 }
 
 div.contact div.resume-download {
@@ -340,8 +391,9 @@ div.contact a.resume {
   font-size: 65px;
   margin: auto;
   text-align: center;
+  transition: color 0.15s;
 }
 
 ul.contact-items li:hover, div.contact a.resume:hover {
-  color: #bbb;
+  color: #7B7B7B;
 }
