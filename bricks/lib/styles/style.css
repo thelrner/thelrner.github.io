@@ -1,0 +1,167 @@
+html, body, canvas, ul, li, a, h1, h2, strong {
+  padding: 0;
+  margin: 0;
+  border: none;
+
+  font: inherit;
+  text-align: inherit;
+  text-decoration: inherit;
+  color: inherit;
+
+  background: transparent;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  font-family: sans-serif;
+  position: relative;
+  background: black;
+  width: 100%;
+  height: 100%;
+  color: white;
+}
+
+.group:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+div.game-main {
+  margin-left: 50px;
+  margin-top: 15px;
+  overflow-x: auto;
+}
+
+section.game-element {
+  float: left;
+  position: relative;
+}
+
+h1.game-title {
+  font-size: 36px;
+  font-weight: bold;
+  display: block;
+  text-align: center;
+}
+
+canvas#game-canvas {
+  display: block;
+  margin: 10px;
+  border: 2px solid white;
+  /*transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);*/
+}
+
+section.game-element div {
+  z-index: 2;
+  display: block;
+  position: absolute;
+  color: white;
+}
+
+section.game-element div.new-game {
+  top: 400px;
+  left: 125px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+section.game-element div.win-message {
+  font-size: 28px;
+  cursor: default;
+  top: 300px;
+  left: 150px;
+}
+
+section.game-element div.lose-message {
+  font-size: 28px;
+  cursor: default;
+  top: 300px;
+  left: 145px;
+}
+
+section.game-element div.new-game:hover {
+  color: green;
+}
+
+section.game-element div.new-game.hidden {
+  display: none;
+}
+
+section.game-element div.lose-message.hidden {
+  display: none;
+}
+
+section.game-element div.win-message.hidden {
+  display: none;
+}
+
+section.user-webcam {
+  position: relative;
+  display: block;
+  float: left;
+  width: 450px;
+  margin-top: 50px;
+}
+
+canvas#game-canvas,
+section.user-webcam video,
+canvas#webcam-canvas {
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+}
+
+section.user-webcam video {
+  width: 100%;
+}
+
+canvas#webcam-canvas {
+  position: absolute;
+  top: 0px;
+  display: block;
+}
+/* PH**** - adjust length of this canvas according to length of the user-webcam video */
+
+div.game-text {
+  padding: 15px;
+  width: 450px;
+  float: left;
+}
+
+div.game-text div.lives-counter {
+  padding: 10px 25px;
+  float: left;
+  border: 2px solid white;
+  text-align: center;
+}
+
+div.lives-counter-container {
+  display: block;
+}
+
+div.lives-counter h2 {
+  display: block;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+div.lives-counter strong.lives-left {
+  display: block;
+  font-size: 24px;
+  color: lightgreen;
+  font-weight: bold;
+}
+
+div.game-text div.rules {
+  margin-top: 20px;
+  display: block;
+  float: left;
+  font-size: 19px;
+}
