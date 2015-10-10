@@ -6,7 +6,7 @@ window.PersonalSite = {
   addNavbarListeners: function() {
     $('div.navbar').on('mouseenter', this.toggleNavOpacity.bind(this));
     $('div.navbar').on('mouseleave', this.toggleNavOpacity.bind(this));
-    $('div.navbar a').on('click', this.scroll.bind(this));
+    $('div.navbar a.scroll').on('click', this.scroll.bind(this));
   },
 
   toggleNavOpacity: function(e) {
