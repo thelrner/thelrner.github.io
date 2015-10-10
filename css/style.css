@@ -162,20 +162,6 @@ div.splash div.splash-blurb p {
   float: left;
 }
 
-figure.me {
-  height: 200px;
-  width: 200px;
-  border-radius: 50%;
-  float: left;
-}
-
-figure.me img {
-  height: 196px;
-  width: 196px;
-  border-radius: 50%;
-  border: 2px solid transparent;
-}
-
 section.about-me-container {
   background: #101010;
   color: #EEEEEE;
@@ -187,7 +173,7 @@ div.about-me {
 }
 
 div.about-me-inner {
-  padding: 30px 80px;
+  padding: 30px 70px;
 }
 
 div.about-me-inner h1 {
@@ -198,9 +184,27 @@ div.about-me-inner h1 {
 }
 
 div.about-me-inner div.about-me-blurb {
-  float: left;
+  float: right;
   width: 400px;
   margin-left: 25px;
+}
+
+div.about-me-inner div.about-me-blurb p {
+  margin-top: 7px;
+}
+
+div.about-me-inner figure.me {
+  height: 210px;
+  width: 210px;
+  border-radius: 50%;
+  float: left;
+  margin-top: 10px;
+}
+
+div.about-me-inner figure.me img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
 }
 
 section.skills-container {
@@ -216,30 +220,31 @@ div.skills h1 {
 }
 
 div.skills {
-  padding: 140px 0px 135px 0px;
+  padding: 140px 100px;
 }
 
 div.skills ul.skill-items {
   margin: auto;
-  width: 800px;
+  width: 700px;
+  padding: 0px 50px;
 }
 
 ul.skill-items li.skill-item {
   float: left;
   display: block;
-  width: 120px;
-  height: 140px;
+  width: 100px;
+  height: 120px;
   padding: 20px;
 }
 
 li.skill-item figure {
   width: 100%;
-  height: 120px;
+  height: 100px;
   margin-bottom: 5px;
 }
 
 li.skill-item figure.skill-image.aws {
-  height: 100px;
+  height: 80px;
   padding: 10px 0px;
 }
 
