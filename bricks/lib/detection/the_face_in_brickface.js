@@ -5,12 +5,15 @@
     this.vCtx = vCtx;
     this.game = game;
     this.video = document.querySelector("#webcam");
+    this.smoother = new Bricks.Smoother(FaceDetect.SMOOTH_FRAMES);
     this.setupMedia();
     this.detector;
     this.canvasSetup;
   };
 
-  FaceDetect.FREQUENCY = 50;
+  FaceDetect.SMOOTH_FRAMES = 4;
+
+  FaceDetect.FREQUENCY = 35;    //50ms proved optimal in testing
 
   FaceDetect.OBJECT_TYPE = objectdetect.frontalface_alt;
   FaceDetect.EDGE_GIVE = 0.25;
@@ -40,7 +43,7 @@
         this.game.setUsingWebcam(true);
   			Bricks.Compatibility.requestAnimationFrame(this.play.bind(this));
   		}.bind(this), function (error) {
-  			alert("I'm unable to set up your webcam! Reload to try again.\nIf you have Chrome, you may need to click on the red X'd out camera on the right side of the URL bar, next to the star");
+  			alert("I'm unable to set up your webcam!\n\nIf you have Chrome, you may need to click on the red X'd out camera on the right side of the URL bar, next to the star.\n\nReload to try again.");
   		});
   	} catch (error) {
   		alert(error);
@@ -93,10 +96,14 @@
 
   FaceDetect.prototype.handleDetectedFaces = function(faces) {
     var largestFace = this.findLargestFace(faces);
-    this.drawFaceBox(largestFace);
-    var coord = largestFace[0] + (largestFace[2] / 2);
+    this.drawFaceBox(largestFace, false);
 
-    //pre-processing
+    var smoothResult = this.preprocessDetection(largestFace);
+    if (!smoothResult) { return; }
+
+    this.drawFaceBox(smoothResult, true);
+    var coord = smoothResult[0] + (smoothResult[2] / 2);
+
     var scaledCoord = this.scaleForGame(coord);
     this.pushFaceSpotToGame(scaledCoord);
   };
@@ -115,6 +122,10 @@
     return largestFace;
   };
 
+  FaceDetect.prototype.preprocessDetection = function(face) {
+    return this.smoother.smooth(face);
+  };
+
   FaceDetect.prototype.scaleForGame = function(coord) {
     //returns coord as proportion of detector width;
     var coordProportion = coord / this.detector.canvas.width;
@@ -131,13 +142,13 @@
     this.game.acceptFaceSpot(scaledCoord);
   };
 
-  FaceDetect.prototype.drawFaceBox = function(face) {
+  FaceDetect.prototype.drawFaceBox = function(face, smoothed) {
     canvasCoords = this.scaleToCanvas(face);
 
     this.vCtx.clearRect(0, 0, this._videoEl.width(), this._videoEl.height());
 
-    this.vCtx.strokeStyle = 'blue';
-    this.vCtx.lineWidth = 2;
+    this.vCtx.strokeStyle = smoothed ? 'blue' : 'grey';
+    this.vCtx.lineWidth = smoothed ? 3 : 1;
 
     this.vCtx.strokeRect( canvasCoords[0], canvasCoords[1],
                         canvasCoords[2], canvasCoords[3] );

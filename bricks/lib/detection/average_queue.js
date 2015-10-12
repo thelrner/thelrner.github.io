@@ -8,14 +8,15 @@
   };
 
   AverageQueue.prototype.enqueue = function(array) {
-    if (this.currQueue.length === 0) {
+    if (this.currQueue.length !== this.maxSize) {
       this.currQueue.push(array);
       this.avgArr = array;
     } else {
       this.currQueue.push(array);
       this.addToAverages(array);
-      return this;
+      this.dequeue();         //automatic dequeue
     }
+    return this;
   };
 
   AverageQueue.prototype.dequeue = function() {
@@ -28,6 +29,7 @@
     for (var i = 0; i < array.length; i++) {
       this.avgArr[i] += (array[i] / this.maxSize);
     };
+    this.avgProd
   };
 
   AverageQueue.prototype.removeFromAverages = function(array) {
@@ -36,7 +38,7 @@
     }
   };
 
-  AverageQueue.prototype.average = function() {
-    return this.avgArr
+  AverageQueue.prototype.avgArrProps = function() {
+    return this.avgArr;
   };
 }() );
