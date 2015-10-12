@@ -4,7 +4,7 @@
   var FaceDetect = Bricks.FaceDetect = function(vCtx, game) {
     this.vCtx = vCtx;
     this.game = game;
-    this.video = Bricks.Video;
+    this.video = document.querySelector("#webcam");
     this.setupMedia();
     this.detector;
     this.canvasSetup;
@@ -40,7 +40,7 @@
         this.game.setUsingWebcam(true);
   			Bricks.Compatibility.requestAnimationFrame(this.play.bind(this));
   		}.bind(this), function (error) {
-  			alert("Looks like I'm unable to set up your webcam! Reload to try again, or use your keyboard for now.");
+  			alert("I'm unable to set up your webcam! Reload to try again.\nIf you have Chrome, you may need to click on the red X'd out camera on the right side of the URL bar, next to the star");
   		});
   	} catch (error) {
   		alert(error);
